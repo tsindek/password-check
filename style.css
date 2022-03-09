@@ -31,6 +31,15 @@ body {
   flex-direction: column;
 }
 
+@media screen and (min-width: 701px) {
+  .password-and-checking-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
 .password-form {
   display: flex;
   flex-direction: column;
@@ -67,6 +76,13 @@ body {
   margin-top: 1.5rem;
 }
 
+@media screen and (min-width: 701px) {
+  .checking-zone {
+    margin-left: 5rem;
+    margin-top: 0;
+  }
+}
+
 .checking-zone__line {
-  margin: 0.2rem;
+  margin: 0.25rem;
 }
