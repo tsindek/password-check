@@ -1,7 +1,7 @@
 const button = document.querySelector("#buttonTogglePasswordVisbility");
 const input1 = document.querySelector("#input1");
 const input2 = document.querySelector("#input2");
-const inputs = document.querySelectorAll("input");
+const body = document.querySelector("body");
 
 //Show Password <-> Hide Password
 button.addEventListener("click", () => {
@@ -17,8 +17,12 @@ button.addEventListener("click", () => {
 });
 
 //eventListener for the input-fields -> uses checking functions
-inputs.addEventListener("input", () => {
+body.addEventListener("input", () => {
   passwordsAreEqual(input1, input2);
+  hasLowerCaseLetters(input1);
+  hasUpperCaseLetters(input1);
+  containsNumbers(input1);
+  hasAtLeast10Characters(input1);
 });
 
 //check if passwords are equal
@@ -33,11 +37,43 @@ function passwordsAreEqual(input1, input2) {
   }
 }
 
-//check if passwords have lowerCaseLetters
-function hasLowerCaseLetters() {}
+//check if password has lowerCaseLetters
+function hasLowerCaseLetters(input1) {
+  if (input1.value.toUpperCase() !== input1.value) {
+    document.querySelector("#lowerCaseLetters").innerText =
+      "Lower Case Letters ✅";
+  } else {
+    document.querySelector("#lowerCaseLetters").innerText =
+      "Lower Case Letters ❌";
+  }
+}
 
-function hasUpperCaseLetters() {}
+//check if password has upperCaseLetters
+function hasUpperCaseLetters(input1) {
+  if (input1.value.toLowerCase() !== input1.value) {
+    document.querySelector("#upperCaseLetters").innerText =
+      "Upper Case Letters ✅";
+  } else {
+    document.querySelector("#upperCaseLetters").innerText =
+      "Upper Case Letters ❌";
+  }
+}
 
-function containsNumbers() {}
+//check if password contains Numbers
+function containsNumbers(input1) {
+  if (/\d/.test(input1.value)) {
+    document.querySelector("#containsNumbers").innerText = "Contains Numbers✅";
+  } else {
+    document.querySelector("#containsNumbers").innerText = "Contains Numbers❌";
+  }
+}
 
-function hasAtLeast10Characters() {}
+function hasAtLeast10Characters(input1) {
+  if (input1.value.length >= 10) {
+    document.querySelector("#atLeast10Chars").innerText =
+      "At least 10 characters long ✅";
+  } else {
+    document.querySelector("#atLeast10Chars").innerText =
+      "At least 10 characters long ❌";
+  }
+}
