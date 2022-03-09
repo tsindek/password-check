@@ -16,7 +16,6 @@ body {
   align-items: center;
   background-color: lightsalmon;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
 }
 
 .heading__h1 {
@@ -61,7 +60,6 @@ body {
   padding: 0rem 1rem;
   border: 1.5px solid black;
   border-radius: 2px;
-  font-weight: 400;
   font-family: inherit;
   width: 10rem;
   height: 1.4rem;
@@ -85,4 +83,12 @@ body {
 
 .checking-zone__line {
   margin: 0.25rem;
+}
+
+.check--correct::after {
+  content: "✅";
+}
+
+.check--wrong::after {
+  content: "❌";
 }
