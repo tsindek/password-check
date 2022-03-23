@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster:regular" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet" />
+    <title>Password Check</title>
+</head>
+
+<body class="body">
+    <div class="heading">
+        <h1 class="heading__h1">Password Check</h1>
+    </div>
+    <div class="password-and-checking-wrapper">
+        <div class="password-form">
+            <input class="password-form__input" type="password" id="input1"> <!-- todo: add name and id -->
+            <input class="password-form__input" type="password" id="input2"> <!-- todo: add name and id -->
+            <button class="password-form__button" id="buttonTogglePasswordVisbility">Show Passwords</button>
+        </div>
+        <div class="checking-zone">
+            <p class="checking-zone__line check--wrong" id="passwordsEqual">Passwords are equal </p>
+            <p class="checking-zone__line check--wrong" id="lowerCaseLetters">Lower Case Letters </p>
+            <p class="checking-zone__line check--wrong" id="upperCaseLetters">Upper Case Letters </p>
+            <p class="checking-zone__line check--wrong" id="containsNumbers">Contains Numbers </p>
+            <p class="checking-zone__line check--wrong" id="atLeast10Chars">At least 10 characters long </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

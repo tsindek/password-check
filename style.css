@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  background-color: lightsalmon;
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading__h1 {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.password-and-checking-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 701px) {
+  .password-and-checking-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-form__input {
+  border: 1.5px solid black;
+  border-radius: 2px;
+  margin: 0.22rem;
+  font-family: inherit;
+  width: 10rem;
+  height: 1.4rem;
+}
+
+.password-form__button {
+  background-color: black;
+  color: white;
+  padding: 0rem 1rem;
+  border: 1.5px solid black;
+  border-radius: 2px;
+  font-family: inherit;
+  width: 10rem;
+  height: 1.4rem;
+  margin: 0.22rem;
+}
+
+.checking-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 701px) {
+  .checking-zone {
+    margin-left: 5rem;
+    margin-top: 0;
+  }
+}
+
+.checking-zone__line {
+  margin: 0.25rem;
+}
+
+.check--correct::after {
+  content: "✅";
+}
+
+.check--wrong::after {
+  content: "❌";
+}
